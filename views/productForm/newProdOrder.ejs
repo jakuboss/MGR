@@ -1,7 +1,8 @@
 <!-- nowe zlecenie prod view -->
 <style>
     .greyCol {
-        background-color: lightgrey;
+
+        background-color: rgb(200, 230, 230);
 
     }
 
@@ -20,10 +21,10 @@
                     <thead>
 
                         <tr class="table-info">
-                            <th>Numer zamówienia</td>
-                            <th>Linia produkcyjna</th>
-                            <th>Data </th>
-                            <th>Godzina rozpoczęcia</th>
+                            <th>Numer zamówienia* </td>
+                            <th>Linia produkcyjna*</th>
+                            <th>Data* </th>
+                            <th>Godzina rozpoczęcia*</th>
 
                         </tr>
 
@@ -35,7 +36,7 @@
                             <td>
                                 <select name="lineSelect" id="lineSelect" style="min-width: 10rem;"
                                     class="form-control-sm">
-                                    <option value="" disabled selected>Wybierz linię</option>
+                                    <option value="" disabled selected>Wybierz linię*</option>
                                     <option value="packingLineA">packingLineA</option>
                                     <option value="packingLineB">packingLineB</option>
                                     <option value="packingLineC">packingLineC</option>
@@ -58,7 +59,7 @@
                         <th>&nbsp;</th>
                         <th>Kol.</th>
                         <th>Produkt</th>
-                        <th>Zamówiona ilość</th>
+                        <th>Zamówiona ilość*</th>
                         <th>Waga</th>
                         <th>Liczba kartonów</th>
                         <th>Liczba palet</th>
@@ -88,11 +89,11 @@
                                 style="max-width: 8rem;">
                         </td>
 
-                        <td><input class="pieceWeight form-control-sm" id="pieceWeight_1" type="text" name="pieceWeight"
-                                value="" readonly="" style="max-width: 8rem;">
+                        <td><input class="pieceWeight form-control-sm greyCol" id="pieceWeight_1" type="text"
+                                name="pieceWeight" value="" readonly="" style="max-width: 8rem;">
                         </td>
-                        <td><input class="cartonQty form-control-sm" id="cartonQty_1" type="text" name="cartonQty"
-                                value="" readonly="" style="max-width: 8rem;">
+                        <td><input class="cartonQty form-control-sm greyCol" id="cartonQty_1" type="text"
+                                name="cartonQty" value="" readonly="" style="max-width: 8rem;">
                         </td>
                         <td class="hide"><input class="useOfA" id="useOfA_1" type="text" name="useOfA" value=""
                                 readonly="" style="max-width: 8rem;">
@@ -106,15 +107,15 @@
                         <td class="hide"><input class="useOfD" id="useOfD_1" type="text" name="useOfD" value=""
                                 readonly="" style="max-width: 8rem;">
                         </td>
-                        <td><input class="palletNum form-control-sm" id="palletNum_1" type="text" name="palletNum"
-                                value="" readonly="" style="max-width: 8rem;">
+                        <td><input class="palletNum form-control-sm greyCol" id="palletNum_1" type="text"
+                                name="palletNum" value="" readonly="" style="max-width: 8rem;">
                         </td>
 
-                        <td><input class="prodTime form-control-sm" id="prodTime_1" type="text" name="prodTime" value=""
-                                readonly="" style="max-width: 8rem;">
-                        </td>
-                        <td><input class="planStart form-control-sm" id="planStart_1" type="text" name="planStart"
+                        <td><input class="prodTime form-control-sm greyCol" id="prodTime_1" type="text" name="prodTime"
                                 value="" readonly="" style="max-width: 8rem;">
+                        </td>
+                        <td><input class="planStart form-control-sm greyCol" id="planStart_1" type="text"
+                                name="planStart" value="" readonly="" style="max-width: 8rem;">
                         </td>
                     </tr>
                     <tr>
@@ -190,24 +191,24 @@
                 </td>
                 <td><input type="text" name="qty" value="" id="" class='qty form-control-sm' style="max-width: 8rem;">
                 </td>
-                <td><input class="pieceWeight form-control-sm" id="" type="text" name="pieceWeight" value="" readonly=""
+                <td><input class="pieceWeight form-control-sm greyCol" id="" type="text" name="pieceWeight" value=""
+                        readonly="" style="max-width: 8rem;"></td>
+                <td><input class="cartonQty form-control-sm greyCol" id="" type="text" name="cartonQty" value=""
+                        readonly="" style="max-width: 8rem;"></td>
+                <td class="hide"><input class="useOfA greyCol" id="" type="text" name="useOfA" value="" readonly=""
                         style="max-width: 8rem;"></td>
-                <td><input class="cartonQty form-control-sm" id="" type="text" name="cartonQty" value="" readonly=""
+                <td class="hide"><input class="useOfB greyCol" id="" type="text" name="useOfB" value="" readonly=""
                         style="max-width: 8rem;"></td>
-                <td class="hide"><input class="useOfA" id="" type="text" name="useOfA" value="" readonly=""
+                <td class="hide"><input class="useOfC greyCol" id="" type="text" name="useOfC" value="" readonly=""
                         style="max-width: 8rem;"></td>
-                <td class="hide"><input class="useOfB" id="" type="text" name="useOfB" value="" readonly=""
+                <td class="hide"><input class="useOfD greyCol" id="" type="text" name="useOfD" value="" readonly=""
                         style="max-width: 8rem;"></td>
-                <td class="hide"><input class="useOfC" id="" type="text" name="useOfC" value="" readonly=""
-                        style="max-width: 8rem;"></td>
-                <td class="hide"><input class="useOfD" id="" type="text" name="useOfD" value="" readonly=""
-                        style="max-width: 8rem;"></td>
-                <td><input class="palletNum form-control-sm" id="" type="text" name="palletNum" value="" readonly=""
-                        style="max-width: 8rem;"></td>
-                <td><input class="prodTime form-control-sm" id="" type="text" name="prodTime" value="" readonly=""
-                        style="max-width: 8rem;"></td>
-                <td><input class="planStart form-control-sm" id="" type="text" name="planStart" value="" readonly=""
-                        style="max-width: 8rem;">
+                <td><input class="palletNum form-control-sm greyCol" id="" type="text" name="palletNum" value=""
+                        readonly="" style="max-width: 8rem;"></td>
+                <td><input class="prodTime form-control-sm greyCol" id="" type="text" name="prodTime" value=""
+                        readonly="" style="max-width: 8rem;"></td>
+                <td><input class="planStart form-control-sm greyCol" id="" type="text" name="planStart" value=""
+                        readonly="" style="max-width: 8rem;">
                 </td>
             </tr>
         </div>
